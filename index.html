@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kairo Music | DJ & EDM Remixes</title>
+<title>Kairo Music | DJ, Remixes & Productions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
@@ -46,6 +46,15 @@ p {
     color: white;
 }
 
+/* 🔥 LOGO NOVO */
+.logo-topo{
+    width:180px;
+    display:block;
+    margin:20px auto;
+    border-radius:50%;
+    box-shadow:0 0 25px #00f7ff;
+}
+
 footer {
     margin-top: 50px;
     padding: 20px;
@@ -58,14 +67,32 @@ footer {
 <body>
 
 <header>
-    <h1>KAIRO MUSIC</h1>
-    <p>DJ & EDM Remixes 🔥</p>
-<a class="btn" href=https://youtube.com/@cairo-music?si=lEcHxwLQHuIzgcnM target="_blank">YouTube</a>
-<a class="btn" href="https://on.soundcloud.com/DPP2Xs65O6r3kTinta" target="_blank">SoundCloud</a>
-<a class="btn" href="https://www.instagram.com/cairo.spk?igsh=Z21rbWh1ZmR4bTlp" target="_blank">Instagram</a>
-<a class="btn" href="https://www.tiktok.com/@cairo.spk" target="_blank">TikTok</a>
-    <
+
+    <!-- 🔥 LOGO DO TOPO -->
+    <img src="logo-kairo.png" alt="Kairo Music" class="logo-topo"><h1>KAIRO MUSIC</h1>
+<p>Official DJ • EDM • Car Music • Remixes • Sertanejo Rock • Electronic Vibes 🚀</p>
+
+    
+    <a class="btn" href="https://youtube.com/@cairo-music" target="_blank">YouTube</a>
+    <a class="btn" href="https://on.soundcloud.com/DPP2Xs65O6r3kTinta" target="_blank">SoundCloud</a>
+    <a class="btn" href="https://www.instagram.com/cairo.spk" target="_blank">Instagram</a>
+    <a class="btn" href="https://www.tiktok.com/@cairo.spk" target="_blank">TikTok</a>
+
 </header>
+
+<!-- CONTADOR DE VISITAS -->
+<div style="margin-top:30px;">
+  <p>👀 Visitas no site:</p>
+  <h2><span id="contador">Carregando...</span></h2>
+</div>
+
+<script async src="https://api.countapi.xyz/hit/kairo-music-2026/visitas?callback=cb"></script>
+
+<script>
+function cb(response) {
+  document.getElementById('contador').innerText = response.value;
+}
+</script>
 
 <footer>
     © 2026 Kairo Music - Todos os direitos reservados
