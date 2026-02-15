@@ -80,11 +80,14 @@ footer {
 
 </header>
 
-<!-- CONTADOR DE VISITAS -->
-<div style="margin-top:30px;">
-  <p>👀 Visitas no site:</p>
-  <h2><span id="contador">Carregando...</span></h2>
-</div>
+<p>👀 Visitas no site: <span id="count">0</span></p>
+
+<script>
+fetch('https://api.countapi.xyz/hit/kairomusic/site')
+  .then(res => res.json())
+  .then(res => document.getElementById('count').innerText = res.value)
+  .catch(err => console.log('Erro ao carregar contador', err));
+</script>
 
 <script async src="https://api.countapi.xyz/hit/kairo-music-2026/visitas?callback=cb"></script>
 
