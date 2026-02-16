@@ -67,34 +67,25 @@ footer {
 <body>
 
 <header>
-
     <!-- 🔥 LOGO DO TOPO -->
-    <img src="logo-kairo.png" alt="Kairo Music" class="logo-topo"><h1>KAIRO MUSIC</h1>
-<p>Official DJ • EDM • Car Music • Remixes • Sertanejo Rock • Electronic Vibes 🚀</p>
+    <img src="logo-kairo.png" alt="Kairo Music" class="logo-topo">
+    <h1>KAIRO MUSIC</h1>
+    <p>Official DJ • EDM • Car Music • Remixes • Sertanejo Rock • Electronic Vibes 🚀</p>
 
-    
     <a class="btn" href="https://youtube.com/@cairo-music" target="_blank">YouTube</a>
     <a class="btn" href="https://on.soundcloud.com/DPP2Xs65O6r3kTinta" target="_blank">SoundCloud</a>
     <a class="btn" href="https://www.instagram.com/cairo.spk" target="_blank">Instagram</a>
     <a class="btn" href="https://www.tiktok.com/@cairo.spk" target="_blank">TikTok</a>
-
 </header>
 
+<!-- Contador de visitas -->
 <p>👀 Visitas no site: <span id="count">0</span></p>
 
 <script>
-fetch('https://api.countapi.xyz/hit/kairomusic/site')
+fetch('https://api.countapi.xyz/hit/kairomusic-2026/visitas')
   .then(res => res.json())
   .then(res => document.getElementById('count').innerText = res.value)
   .catch(err => console.log('Erro ao carregar contador', err));
-</script>
-
-<script async src="https://api.countapi.xyz/hit/kairo-music-2026/visitas?callback=cb"></script>
-
-<script>
-function cb(response) {
-  document.getElementById('contador').innerText = response.value;
-}
 </script>
 
 <footer>
